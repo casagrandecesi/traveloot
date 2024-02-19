@@ -1,0 +1,11 @@
+Per fare login su impresainazione.it:
+
+  1. Vai su www.impresainazione.it
+  2. Clicca su Accedi
+  3. Inserisci email a password (e seleziona "Ricordami")
+  4. Se sei redirezionato su "https://my.jaitalia.org/profilo_old" cambia URL
+     andando su "profilo" (togli il _old alla fine)
+  5. Clicca su "Le mie classi"
+  6. Clicca su "Classi in cui sei stato aggiunto"
+  7. Clicca su "Programma: Impresa in azione 2023/2024"
+  8. Fatto!
