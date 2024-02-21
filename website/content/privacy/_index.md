@@ -99,6 +99,6 @@ Art.21: l’Utente ha il diritto di opporsi in qualsiasi momento, per motivi con
 
 # Recapiti del titolare
 
-L’Utente può esercitare i suoi diritti in qualunque momento, mediante richiesta da inviare al Titolare in qualità di titolare del trattamento via e-mail all’indirizzo biodiversita@casagrandecesi.edu.it.
+L’Utente può esercitare i suoi diritti in qualunque momento, mediante richiesta da inviare al Titolare in qualità di titolare del trattamento via e-mail all’indirizzo traveloot@casagrandecesi.edu.it.
 
 *Ultimo aggiornamento: mercoledì 7 maggio 2022*

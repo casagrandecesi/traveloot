@@ -1,20 +1,20 @@
 ---
 enable: true
-title: "La biodiversità on the road"
+title: "Come funziona"
 subtitle: >
-          Non è la destinazione, ma il viaggio che conta. Ovunque tu sia, apri l'app del
-          Parco digitale della biodiversità umbra sul tuo smartphone o sul
-          tuo tablet e scopri la ricchezza nascosta che ti circonda.
+          Sei un <strong>turista</strong>? Raggiungi un punto Traveloot, scansiona il QR code e vedi se hai vinto!.<br><br>
+          Sei un <strong>impresa locale</strong> che si appoggia alla filiera del turismo? Contattaci per inserzioni personalizzate!<br><br>
+          Sei un <strong>ente o privato</strong> che gestisce siti turistici? Contattaci per un preventivo per l'installazione di un punto Traveloot!
 htmlLeft: >
           <p style="text-align: center">
-            <img src="images/app-filled.png">
+            <img src="images/how-it-works.jpg" style="max-width: 100%">
           </p>
 htmlRight: >
           <p style="text-align: center">
-            <a class="app-store" href="https://apps.apple.com/us/app/biodiversit%C3%A0-umbra-on-the-road/id1641797367"></a>
+            <a class="app-store" href="javascript:alert('Coming soon...')"></a>
           </p>
           <p style="text-align: center">
             <!--<a class="apk-download" href="android/ontheroad.apk"></a>-->
-            <a class="play-store" href="https://play.google.com/store/apps/details?id=it.edu.casagrandecesi.ontheroad"></a>
+            <a class="play-store" href="javascript:alert('Coming soon...')"></a>
           </p>
 ---

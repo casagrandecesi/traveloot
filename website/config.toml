@@ -6,13 +6,8 @@ theme= "travelootja"
 title = 'Traveloot JA'
  
 [Menu]
-  # Main Menu
   [[menu.Main]]
-  name = "Metaverso"
-  url= "#gallery"
-  weight = 1
-  [[menu.Main]]
-  name = "On the road"
+  name = "Come funziona"
   url= "#service"
   weight = 2
   [[menu.Main]]
@@ -42,7 +37,7 @@ title = 'Traveloot JA'
   aboutPageURL = "blog"
   contactLink = "contact"
   copyright = "© {year} I.I.S. \"Casagrande-Cesi\", Terni"
-  formspreeURL = "https://formspree.io/f/mbjwqlbd"
+  formspreeURL = "https://formspree.io/f/xvoeayrp"
   googleAnalytics = ""
   logo = "images/logo.png"
   footerlogo = "images/logo.png"
@@ -50,8 +45,8 @@ title = 'Traveloot JA'
 
   [params.address]
   address = "<a style=\"color: white\" href=\"https://casagrandecesi.edu.it\"><img src=\"images/cc.png\" width=\"30\"> I.I.S. \"Casagrande-Cesi\"</a><br><br>L.go Paolucci 1<br>05100 Terni"
-  email = "biodiversita@casagrandecesi.edu.it"
-  openingDesc = "Il Parco digitale della biodiversità umbra è stato creato dagli studenti dell'<a style=\"color: white\" href=\"https://casagrandecesi.edu.it\">I.I.S. \"Casagrande-Cesi\" di Terni</a>."
+  email = "traveloot@casagrandecesi.edu.it"
+  openingDesc = "Traveloot è una mini-impresa della classe 3B ITE SIA dell'<a style=\"color: white\" href=\"https://casagrandecesi.edu.it\">I.I.S. \"Casagrande-Cesi\" di Terni</a>."
   phone = "0744 201926"
 
   [params.map]
@@ -63,7 +58,7 @@ title = 'Traveloot JA'
   # Socail icons
   [[params.social]]
   icon = "ti-facebook"
-  url = "https://www.facebook.com/traveloot.ja"
+  url = "https://www.facebook.com/profile.php?id=61556530985477"
   weight = 1
   #[[params.social]]
   #icon = "ti-instagram"
