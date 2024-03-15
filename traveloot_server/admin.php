@@ -1,14 +1,60 @@
 <?php
+
 session_start();
 if (!isset($_SESSION['username'])) {
     header('Location: index.php');
 }
 
-$db = [];
+// Debugging
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+
 if (file_exists('db.json')) {
     $raw_json = file_get_contents('db.json');
     $db = json_decode($raw_json, true);
+} else
+    $db = [];
+
+if (isset($_POST['submit-client']) && $_POST['client-name']) {
+    if (!$db['clienti'])
+        $db['clienti'] = [];
+    $db['clienti'][] = trim($_POST['client-name']);    
 }
+
+if (isset($_POST['submit-point']) && isset($_POST['point-name']) && isset($_POST['point-password']) && isset($_POST['point-lat']) && isset($_POST['point-lon'])) {
+    if (!$db['punti'])
+        $db['punti'] = [];
+    $db['punti'][] = [
+        'nome' => $_POST['point-name'],
+        'password' => $_POST['point-password'],
+        'lat' => $_POST['point-lat'],
+        'lon' => $_POST['point-lon']
+    ];
+}
+
+if (isset($_POST['submit-prize']) && $_POST['prize-desc'] && $_POST['prize-prob']) {
+    if (!$db['premi'])
+        $db['premi'] = [];
+    $db['premi'][] = [
+        'desc' => trim($_POST['prize-desc']),
+        'prob' => $_POST['prize-prob']
+    ];
+}
+
+if ($db['clienti'])
+    asort($db['clienti']);
+else
+    $db['clienti'] = [];
+if ($db['punti'])
+    asort($db['punti']);
+else
+    $db['punti'] = [];
+if ($db['premi'])
+    asort($db['premi']);
+else
+    $db['premi'] = [];
+file_put_contents('db.json', json_encode($db))
 
 ?>
 <!doctype html>
@@ -51,7 +97,7 @@ if (file_exists('db.json')) {
         <div class="row">
             <div class="col">
                 <h2>Inserisci cliente</h2>
-                <form>
+                <form method="post" action="admin.php">
                     <div class="mb-3">
                         <label for="client-name" class="form-label">Cliente</label>
                         <input type="text" class="form-control" id="client-name" name="client-name"
@@ -64,13 +110,17 @@ if (file_exists('db.json')) {
             </div> <!-- .col -->
             <div class="col">
                 <h2>Inserisci punto traveloot</h2>
-                <form>
+                <form method="post" action="admin.php">
                     <div class="mb-3">
                         <label for="point-name" class="form-label">Punto</label>
                         <input type="text" class="form-control" id="point-name" name="point-name"
                             aria-describedby="point-name-help">
                         <div id="point-name-help" class="form-text">Nome dell'attrazione turistica in cui è installato
                             il punto Traveloot</div>
+                        <label for="point-password" class="form-label">Password</label>
+                        <input type="text" class="form-control" id="point-password" name="point-password"
+                            aria-describedby="point-password-help">
+                        <div id="point-password-help" class="form-text">Password usata per generare il QR code</div>
                         <label for="point-lat" class="form-label">Latitudine</label>
                         <input type="text" class="form-control" id="point-lat" name="point-lat"
                             aria-describedby="point-latlon-help">
@@ -81,11 +131,31 @@ if (file_exists('db.json')) {
                             41.123 e 12.3232)</div>
                         <label for="point-client" class="form-label">Cliente del punto Traveloot</label>
                         <select id="point-client" class="form-select">
-                            <option>Disabled select</option>
+                            <?php foreach ($db['clienti'] as $cliente) {
+                                echo "<option value='$cliente'>$cliente</option>\n";
+                            } ?>
                         </select>
 
                     </div>
                     <button type="submit" class="btn btn-primary" name="submit-point">Aggiungi punto</button>
+                </form>
+            </div> <!-- .col -->
+            <div class="col">
+                <h2>Inserisci premio</h2>
+                <form method="post" action="admin.php">
+                    <div class="mb-3">
+                        <label for="prize-desc" class="form-label">Premio</label>
+                        <input type="text" class="form-control" id="prize-desc" name="prize-desc"
+                            aria-describedby="prize-desc-help">
+                        <div id="prize-desc-help" class="form-text">Descrizione del premio</div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="prize-prob" class="form-label">Probabilità</label>
+                        <input type="text" class="form-control" id="prize-prob" name="prize-prob"
+                            aria-describedby="prize-prob-help">
+                        <div id="prize-prob-help" class="form-text">Probabilità di vincita</div>
+                    </div>
+                    <button type="submit" class="btn btn-primary" name="submit-prize">Aggiungi premio</button>
                 </form>
             </div> <!-- .col -->
         </div> <!-- .row -->
@@ -93,9 +163,27 @@ if (file_exists('db.json')) {
         <div class="row">
             <div class="col">
                 <h2>Lista clienti</h2>
+                <ul>
+                    <?php foreach($db['clienti'] as $cliente) {
+                        echo "<li>$cliente</li>\n";
+                    } ?>
+                </ul>
             </div> <!-- .col -->
             <div class="col">
                 <h2>Lista punti Traveloot</h2>
+                <ul>
+                <?php foreach($db['punti'] as $punto) { ?>
+                    <li><?= $punto['nome'] ?> (<?= $punto['password'] ?>)</li>
+                <?php } ?>
+                </ul>
+            </div> <!-- .col -->
+            <div class="col">
+                <h2>Lista premi</h2>
+                <ul>
+                <?php foreach($db['premi'] as $premio) { ?>
+                    <li><?= $premio['desc'] ?> (<?= $premio['prob'] ?>)</li>
+                <?php } ?>
+                </ul>
             </div> <!-- .col -->
         </div> <!-- .row -->
     </div> <!-- .container -->
