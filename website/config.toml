@@ -60,9 +60,9 @@ title = 'Traveloot JA'
   icon = "ti-facebook"
   url = "https://www.facebook.com/profile.php?id=61556530985477"
   weight = 1
-  #[[params.social]]
-  #icon = "ti-instagram"
-  #url = "https://www.instagram.com/casagrande_cesi/"
-  #weight = 2
+  [[params.social]]
+  icon = "ti-instagram"
+  url = "https://www.instagram.com/traveloot_ja/"
+  weight = 2
   
   
