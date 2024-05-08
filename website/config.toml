@@ -4,6 +4,9 @@ languageCode = 'it-it'
 paginate = 6
 theme= "travelootja"
 title = 'Traveloot JA'
+
+[markup.goldmark.renderer]
+  unsafe = true # Allow HTML in md files
  
 [Menu]
   [[menu.Main]]
