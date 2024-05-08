@@ -17,3 +17,4 @@ Il 23 ed il 24 maggio, quindi, Traveloot sarà a Parma, dove sfiderà team prove
   - [Articolo di Radio Galileo (06/05/2024)](https://www.radiogalileo.it/cronaca/2024/05/06/178905-mpresa-in-azione-2024-vince-il-team-traveloot-ja-del-cesi-casagrande-di-terni)
   - [Articolo di Terninrete (07/05/2024)](https://terninrete.it/notizie-di-terni-terni-listituto-cesi-casagrande-ha-vinto-il-premio-miglior-impresa-junior-achievement-dellumbria/)
   - [Articolo sul sito dell'I.I.S. "Casagrande-Cesi" (07/05/2024)](https://www.casagrandecesi.edu.it/pagine/traveloot-ja-del-cesi-casagrande-di-terni-primo-classificato-in-impresa-in-azione)
+  - [Video servizio su Perugia Today (07/05/2024)](https://www.perugiatoday.it/video/impresa-azione-scuole-superiori-umbria-camera-commercio-ministero-istruzione.html)
